@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JGA Stuttgart Rallye</title>
+    <title>MDV 2026 Stuttgart Rallye</title>
     <style>
         /* Mobile-First Design & Stuttgart Farben (Schwarz/Gelb) */
         body {
@@ -23,9 +23,9 @@
         }
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
         header p {
             margin: 5px 0 0 0;
@@ -129,102 +129,120 @@
 <body>
 
 <header>
-    <h1>JGA Stuttgart</h1>
-    <p>90 Minuten. 5 Missionen. Ein Absturz... äh, Abschluss!</p>
+    <h1>MDV 2026</h1>
+    <p>Mission Stuttgart. Keine Panik, pure Effizienz & Teamwork!</p>
 </header>
 
 <div class="container">
 
     <div id="station1" class="card">
-        <h2>📍 Station 1: Schlossplatz</h2>
-        <p>Willkommen in der feinen Stube Stuttgarts! Genug rumgestanden, ihr seid hier nicht zum Enten füttern. Die Crew muss sich jetzt auf den Tag einschwören.</p>
+        <h2>📍 Station 1: Stuttgart Hauptbahnhof</h2>
+        <p>Willkommen beim MDV 2026! Passend zu unserem strategischen Vorgehen starten wir am Wahrzeichen der schwäbischen Geduld: der Stuttgart 21 Baustelle.</p>
         
         <div class="challenge-box">
-            🔥 Die Mission: "Das menschliche Denkmal"<br><br>
-            Vergesst das olle Schloss im Hintergrund. Baut als Gruppe ein episches menschliches Denkmal auf dem Rasen (z.B. eine Pyramide, eine epische Kampfszene oder das letzte Abendmahl).
+            🚧 Die Mission: "Der schweigende Bagger"<br><br>
+            Sucht euch einen Bauzaun oder ein Bullauge zur Baustelle. Die gesamte Gruppe muss nun völlig lautlos eine menschliche Baumaschine (z.B. einen Bagger, Kran oder Pressluftbohrer) nachstellen. 
         </div>
-        <p><strong>Die Regel:</strong> Ihr dürft erst anstoßen, wenn ein ahnungsloser Passant ein Foto von euch gemacht hat und ihr ihm überzeugend erklären konntet, dass dies moderne Performance-Kunst ist.</p>
+        <p><strong>Die Regel:</strong> Ein Passant muss ein Foto von eurer stummen "Maschine" machen. Erst wenn das Bild im Kasten ist, dürft ihr weiter.</p>
 
         <div id="unlock-area-1" class="unlock-area">
-            <label>Mission erfüllt? Passwort für Station 2 eingeben:</label>
+            <label>Baustelle abgenommen? Passwort eingeben:</label>
             <input type="password" id="pwd1" inputmode="numeric" maxlength="4" placeholder="****">
             <button onclick="checkPassword(1, 2)">Freischalten</button>
-            <div id="error1" class="error-msg">Falsches Passwort! Habt ihr jetzt schon einen sitzen?</div>
+            <div id="error1" class="error-msg">Fehlkalkulation! Falsches Passwort.</div>
         </div>
     </div>
 
     <div id="station2" class="card hidden">
-        <h2>📍 Station 2: Schillerplatz</h2>
-        <p>Ah, der Schillerplatz. Wo die Dichter und Denker... Moment, falscher Film. Wir sind hier in Schwaben! Hochdeutsch könnt ihr zuhause schwätzen.</p>
+        <h2>📍 Station 2: Schlossplatz</h2>
+        <p>Das Fundament steht. Jetzt geht es zur feinen Stube Stuttgarts. Genug rumgestanden, hier ist voller Körpereinsatz gefragt.</p>
         
         <div class="challenge-box">
-            🔥 Die Mission: "Schwäbisch für Anfänger"<br><br>
-            Schnappt euch echte "Schwoaba" (Passanten) und lasst euch in 10 Minuten drei waschechte schwäbische Trinksprüche, Lebensweisheiten oder Schimpfwörter beibringen.
+            🏛️ Die Mission: "Das moderne Denkmal"<br><br>
+            Vergesst das olle Schloss im Hintergrund. Baut als Gruppe ein episches menschliches Denkmal auf dem Rasen auf (z.B. eine Pyramide oder eine Denker-Pose).
         </div>
-        <p><strong>Das Beweisvideo:</strong> Die ganze Truppe stellt sich vors Schiller-Denkmal und brüllt die drei Sprüche im Chor in die Handykamera. Je lauter und unverständlicher, desto besser!</p>
+        <p><strong>Die Regel:</strong> Keine Geräusche! Ihr dürft eure Formation erst auflösen, wenn ihr jemanden gefunden habt, der ein Foto von euch gemacht hat, weil er denkt, es sei moderne Performance-Kunst.</p>
 
         <div id="unlock-area-2" class="unlock-area">
-            <label>Video im Kasten? Passwort für Station 3:</label>
+            <label>Denkmal errichtet? Passwort für Station 3:</label>
             <input type="password" id="pwd2" inputmode="numeric" maxlength="4" placeholder="****">
             <button onclick="checkPassword(2, 3)">Freischalten</button>
-            <div id="error2" class="error-msg">Falsches Passwort! Wohl zu viele Maultaschen gegessen?</div>
+            <div id="error2" class="error-msg">Zugriff verweigert! Stimmt die Statik nicht?</div>
         </div>
     </div>
 
     <div id="station3" class="card hidden">
-        <h2>📍 Station 3: Marktplatz / Rathaus</h2>
-        <p>Jetzt wird's dreckig. Schluss mit Harmonie, es ist Zeit für einen epischen Wettkampf!</p>
+        <h2>📍 Station 3: Schillerplatz</h2>
+        <p>Dichter und Denker waren nicht für ihr lautes Organ bekannt. Wir bleiben kultiviert und widmen uns lautlos der lokalen Tradition.</p>
         
         <div class="challenge-box">
-            🔥 Die Mission: "Das Tausch-Duell"<br><br>
-            Teilt euch in zwei Teams auf. Jedes Team bekommt jetzt einen absolut wertlosen Gegenstand (Bierdeckel, Apfel, Kieselstein). Ihr habt 10 Minuten, um diesen Schrott bei Passanten oder in den Läden gegen etwas Besseres einzutauschen.
+            🤫 Die Mission: "Die stumme Kehrwoche"<br><br>
+            Spielt "Schwaben-Pantomime". Ihr müsst Passanten einen typisch schwäbischen Begriff (z.B. Kehrwoche, Maultasche, Brezel oder Spätzlepresse) vorspielen – komplett ohne Worte.
         </div>
-        <p><strong>Die Strafe:</strong> Wer nach 10 Minuten den langweiligeren Gegenstand in der Hand hält, hat kläglich versagt und zahlt die nächste Runde!</p>
+        <p><strong>Das Ziel:</strong> Sobald ein Local den Begriff laut ausspricht und errät, habt ihr die kulturelle Integration bestanden.</p>
 
         <div id="unlock-area-3" class="unlock-area">
-            <label>Tauschgeschäft erledigt? Passwort für Station 4:</label>
+            <label>Kultur-Test bestanden? Passwort für Station 4:</label>
             <input type="password" id="pwd3" inputmode="numeric" maxlength="4" placeholder="****">
             <button onclick="checkPassword(3, 4)">Freischalten</button>
-            <div id="error3" class="error-msg">Falsches Passwort! Konzentriert euch!</div>
+            <div id="error3" class="error-msg">Falsches Passwort! Wohl zu viele Maultaschen gegessen?</div>
         </div>
     </div>
 
     <div id="station4" class="card hidden">
-        <h2>📍 Station 4: Das Bergfest</h2>
-        <p>Ihr habt euch tapfer geschlagen. Die Kehlen sind trocken, die Beine schwer. Zeit für eine wohlverdiente Pause! Aber in Stuttgart müsst ihr euch entscheiden – seid ihr Team "Schickimicki" oder Team "Kult"?</p>
+        <h2>📍 Station 4: Marktplatz / Rathaus</h2>
+        <p>Jetzt wird verhandelt. Taktik und leise Überzeugungskraft sind gefragt.</p>
         
-        <div class="choice-box">
-            <div class="choice">
-                <strong>🍾 Option 1: Stilvoll in der Kessler Sekt Bar</strong><br>
-                Ab in die Calwer Straße! Holt euch eine Runde feinsten Kessler Sekt und stoßt elegant auf ein geiles Wochenende an. Kleiner Finger abspreizen nicht vergessen!
-            </div>
-            <div class="choice">
-                <strong>🍺 Option 2: Kultig am Palast der Republik</strong><br>
-                Ab zur Friedrichstraße! Holt euch alle ein eiskaltes "Wulle" Bier, pflanzt euch an die Mauer vor dem runden Kiosk und lasst das Stuttgarter Treiben auf euch wirken. Ein Prosit auf die Crew!
-            </div>
+        <div class="challenge-box">
+            🍎 Die Mission: "Das stumme Tausch-Duell"<br><br>
+            Teilt euch in zwei Teams auf. Jedes Team bekommt einen absolut wertlosen Gegenstand (Bierdeckel, Kronkorken). Ihr habt 10 Minuten, um diesen Schrott bei Passanten oder in Läden gegen etwas Besseres einzutauschen. Reden ist erlaubt, schreien strengstens verboten!
         </div>
+        <p><strong>Die Strafe:</strong> Das Team, das nach 10 Minuten den schlechteren Deal gemacht hat, zahlt später die nächste Runde.</p>
 
         <div id="unlock-area-4" class="unlock-area">
-            <label>Durst gelöscht? Passwort für das große Finale:</label>
+            <label>Tauschgeschäft erledigt? Passwort für Station 5:</label>
             <input type="password" id="pwd4" inputmode="numeric" maxlength="4" placeholder="****">
             <button onclick="checkPassword(4, 5)">Freischalten</button>
-            <div id="error4" class="error-msg">Nee, das war falsch. Noch 'n Bierchen gefällig?</div>
+            <div id="error4" class="error-msg">Falsches Passwort! Verhandlungsgeschick mangelhaft.</div>
         </div>
     </div>
 
     <div id="station5" class="card hidden">
-        <h2>📍 Station 5: Hans-im-Glück-Brunnen</h2>
-        <p>Ihr habt es geschafft! Willkommen im absoluten Epizentrum der Stuttgarter Nächte. Hier eskaliert die Party gleich richtig. Aber bevor ihr in die Bars einfallt, gibt es noch eine letzte Hürde.</p>
+        <h2>📍 Station 5: Das Bergfest</h2>
+        <p>Ihr habt euch tapfer geschlagen. Zeit für eine wohlverdiente Pause auf den MDV 2026! Aber in Stuttgart müsst ihr euch entscheiden – seid ihr Team "Schickimicki" oder Team "Kult"?</p>
+        
+        <div class="choice-box">
+            <div class="choice">
+                <strong>🍾 Option 1: Stilvoll in der Kessler Sekt Bar</strong><br>
+                Ab in die Calwer Straße! Holt euch eine Runde feinsten Kessler Sekt und stoßt elegant auf ein grandioses MDV-Wochenende an. Kleiner Finger abspreizen nicht vergessen!
+            </div>
+            <div class="choice">
+                <strong>🍺 Option 2: Kultig am Palast der Republik</strong><br>
+                Ab zur Friedrichstraße! Holt euch alle ein eiskaltes "Wulle" Bier, pflanzt euch an die Mauer vor dem Kiosk und genießt entspannt das Stuttgarter Treiben. Ein Prosit auf die Crew!
+            </div>
+        </div>
+
+        <div id="unlock-area-5" class="unlock-area">
+            <label>Durst gelöscht? Passwort für das große Finale:</label>
+            <input type="password" id="pwd5" inputmode="numeric" maxlength="4" placeholder="****">
+            <button onclick="checkPassword(5, 6)">Freischalten</button>
+            <div id="error5" class="error-msg">Nee, das war falsch. Noch ein Kaltgetränk gefällig?</div>
+        </div>
+    </div>
+
+    <div id="station6" class="card hidden">
+        <h2>📍 Station 6: Hans-im-Glück-Brunnen</h2>
+        <p>Ihr habt es geschafft! Willkommen im Zentrum der Stuttgarter Gastro-Szene. Aber bevor wir zum gemütlichen Teil übergehen, gibt es noch eine letzte Hürde.</p>
         
         <div class="challenge-box">
-            🔥 Die finale Mission: "Der Türsteher-Test"<br><br>
-            Beweist, dass ihr als Gruppe synchron seid. Denkt euch einen kurzen (mind. 10 Sekunden) Gruppen-Handshake oder einen absurden Jubel-Tanz aus.
+            🥷 Die finale Mission: "Der Ninja-Türsteher-Test"<br><br>
+            Beweist, dass ihr als Gruppe blind harmoniert. Denkt euch einen lautlosen, völlig synchronen 10-sekündigen Gruppen-Handshake aus.
         </div>
-        <p><strong>Der Abschluss:</strong> Führt den Tanz fehlerfrei und im Chor direkt am Brunnen auf. Wenn alle Passanten peinlich berührt wegschauen, habt ihr bestanden!</p>
+        <p><strong>Der Abschluss:</strong> Führt diese Choreografie wie echte Ninjas fehlerfrei am Brunnen vor. Wenn ihr euch ohne ein einziges Wort perfekt synchron bewegt, habt ihr den MDV 2026 offiziell gemeistert!</p>
         
         <div style="background-color: #000; color: #FFD100; padding: 20px; text-align: center; border-radius: 8px; margin-top: 20px;">
-            <h3>🎉 RALLYE BEENDET! 🎉</h3>
-            <p>Geht rein und feiert, als gäbe es kein Morgen. Prost!</p>
+            <h3>🎉 MDV 2026 ERFOLGREICH BEENDET! 🎉</h3>
+            <p>Geht rein und feiert euren Erfolg. Prost!</p>
         </div>
     </div>
 
