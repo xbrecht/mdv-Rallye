@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JGA Stuttgart Rallye</title>
+    <style>
+        /* Mobile-First Design & Stuttgart Farben (Schwarz/Gelb) */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        header {
+            background-color: #FFD100; /* Stuttgart Gelb */
+            color: #000;
+            text-align: center;
+            padding: 25px 15px;
+            border-bottom: 5px solid #000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .container {
+            padding: 15px;
+            max-width: 600px;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 6px solid #E32221; /* Roter Akzent */
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .hidden {
+            display: none;
+            opacity: 0;
+        }
+        h2 {
+            margin-top: 0;
+            color: #000;
+            font-size: 20px;
+            border-bottom: 2px dashed #ccc;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.5;
+            font-size: 16px;
+        }
+        .challenge-box {
+            background-color: #fff9e6;
+            border: 1px solid #FFD100;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .unlock-area {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid #FFD100;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+        }
+        button {
+            background-color: #FFD100;
+            color: #000;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        button:active {
+            background-color: #e6bc00;
+        }
+        .choice-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .choice {
+            background-color: #f9f9f9;
+            border: 2px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .error-msg {
+            color: #ff4444;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>JGA Stuttgart</h1>
+    <p>90 Minuten. 5 Missionen. Ein Absturz... äh, Abschluss!</p>
+</header>
+
+<div class="container">
+
+    <div id="station1" class="card">
+        <h2>📍 Station 1: Schlossplatz</h2>
+        <p>Willkommen in der feinen Stube Stuttgarts! Genug rumgestanden, ihr seid hier nicht zum Enten füttern. Die Crew muss sich jetzt auf den Tag einschwören.</p>
+        
+        <div class="challenge-box">
+            🔥 Die Mission: "Das menschliche Denkmal"<br><br>
+            Vergesst das olle Schloss im Hintergrund. Baut als Gruppe ein episches menschliches Denkmal auf dem Rasen (z.B. eine Pyramide, eine epische Kampfszene oder das letzte Abendmahl).
+        </div>
+        <p><strong>Die Regel:</strong> Ihr dürft erst anstoßen, wenn ein ahnungsloser Passant ein Foto von euch gemacht hat und ihr ihm überzeugend erklären konntet, dass dies moderne Performance-Kunst ist.</p>
+
+        <div id="unlock-area-1" class="unlock-area">
+            <label>Mission erfüllt? Passwort für Station 2 eingeben:</label>
+            <input type="password" id="pwd1" inputmode="numeric" maxlength="4" placeholder="****">
+            <button onclick="checkPassword(1, 2)">Freischalten</button>
+            <div id="error1" class="error-msg">Falsches Passwort! Habt ihr jetzt schon einen sitzen?</div>
+        </div>
+    </div>
+
+    <div id="station2" class="card hidden">
+        <h2>📍 Station 2: Schillerplatz</h2>
+        <p>Ah, der Schillerplatz. Wo die Dichter und Denker... Moment, falscher Film. Wir sind hier in Schwaben! Hochdeutsch könnt ihr zuhause schwätzen.</p>
+        
+        <div class="challenge-box">
+            🔥 Die Mission: "Schwäbisch für Anfänger"<br><br>
+            Schnappt euch echte "Schwoaba" (Passanten) und lasst euch in 10 Minuten drei waschechte schwäbische Trinksprüche, Lebensweisheiten oder Schimpfwörter beibringen.
+        </div>
+        <p><strong>Das Beweisvideo:</strong> Die ganze Truppe stellt sich vors Schiller-Denkmal und brüllt die drei Sprüche im Chor in die Handykamera. Je lauter und unverständlicher, desto besser!</p>
+
+        <div id="unlock-area-2" class="unlock-area">
+            <label>Video im Kasten? Passwort für Station 3:</label>
+            <input type="password" id="pwd2" inputmode="numeric" maxlength="4" placeholder="****">
+            <button onclick="checkPassword(2, 3)">Freischalten</button>
+            <div id="error2" class="error-msg">Falsches Passwort! Wohl zu viele Maultaschen gegessen?</div>
+        </div>
+    </div>
+
+    <div id="station3" class="card hidden">
+        <h2>📍 Station 3: Marktplatz / Rathaus</h2>
+        <p>Jetzt wird's dreckig. Schluss mit Harmonie, es ist Zeit für einen epischen Wettkampf!</p>
+        
+        <div class="challenge-box">
+            🔥 Die Mission: "Das Tausch-Duell"<br><br>
+            Teilt euch in zwei Teams auf. Jedes Team bekommt jetzt einen absolut wertlosen Gegenstand (Bierdeckel, Apfel, Kieselstein). Ihr habt 10 Minuten, um diesen Schrott bei Passanten oder in den Läden gegen etwas Besseres einzutauschen.
+        </div>
+        <p><strong>Die Strafe:</strong> Wer nach 10 Minuten den langweiligeren Gegenstand in der Hand hält, hat kläglich versagt und zahlt die nächste Runde!</p>
+
+        <div id="unlock-area-3" class="unlock-area">
+            <label>Tauschgeschäft erledigt? Passwort für Station 4:</label>
+            <input type="password" id="pwd3" inputmode="numeric" maxlength="4" placeholder="****">
+            <button onclick="checkPassword(3, 4)">Freischalten</button>
+            <div id="error3" class="error-msg">Falsches Passwort! Konzentriert euch!</div>
+        </div>
+    </div>
+
+    <div id="station4" class="card hidden">
+        <h2>📍 Station 4: Das Bergfest</h2>
+        <p>Ihr habt euch tapfer geschlagen. Die Kehlen sind trocken, die Beine schwer. Zeit für eine wohlverdiente Pause! Aber in Stuttgart müsst ihr euch entscheiden – seid ihr Team "Schickimicki" oder Team "Kult"?</p>
+        
+        <div class="choice-box">
+            <div class="choice">
+                <strong>🍾 Option 1: Stilvoll in der Kessler Sekt Bar</strong><br>
+                Ab in die Calwer Straße! Holt euch eine Runde feinsten Kessler Sekt und stoßt elegant auf ein geiles Wochenende an. Kleiner Finger abspreizen nicht vergessen!
+            </div>
+            <div class="choice">
+                <strong>🍺 Option 2: Kultig am Palast der Republik</strong><br>
+                Ab zur Friedrichstraße! Holt euch alle ein eiskaltes "Wulle" Bier, pflanzt euch an die Mauer vor dem runden Kiosk und lasst das Stuttgarter Treiben auf euch wirken. Ein Prosit auf die Crew!
+            </div>
+        </div>
+
+        <div id="unlock-area-4" class="unlock-area">
+            <label>Durst gelöscht? Passwort für das große Finale:</label>
+            <input type="password" id="pwd4" inputmode="numeric" maxlength="4" placeholder="****">
+            <button onclick="checkPassword(4, 5)">Freischalten</button>
+            <div id="error4" class="error-msg">Nee, das war falsch. Noch 'n Bierchen gefällig?</div>
+        </div>
+    </div>
+
+    <div id="station5" class="card hidden">
+        <h2>📍 Station 5: Hans-im-Glück-Brunnen</h2>
+        <p>Ihr habt es geschafft! Willkommen im absoluten Epizentrum der Stuttgarter Nächte. Hier eskaliert die Party gleich richtig. Aber bevor ihr in die Bars einfallt, gibt es noch eine letzte Hürde.</p>
+        
+        <div class="challenge-box">
+            🔥 Die finale Mission: "Der Türsteher-Test"<br><br>
+            Beweist, dass ihr als Gruppe synchron seid. Denkt euch einen kurzen (mind. 10 Sekunden) Gruppen-Handshake oder einen absurden Jubel-Tanz aus.
+        </div>
+        <p><strong>Der Abschluss:</strong> Führt den Tanz fehlerfrei und im Chor direkt am Brunnen auf. Wenn alle Passanten peinlich berührt wegschauen, habt ihr bestanden!</p>
+        
+        <div style="background-color: #000; color: #FFD100; padding: 20px; text-align: center; border-radius: 8px; margin-top: 20px;">
+            <h3>🎉 RALLYE BEENDET! 🎉</h3>
+            <p>Geht rein und feiert, als gäbe es kein Morgen. Prost!</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Das Master-Passwort für alle Stationen
+    const MASTER_PASSWORD = "0000";
+
+    function checkPassword(currentStation, nextStation) {
+        const inputField = document.getElementById('pwd' + currentStation);
+        const errorMsg = document.getElementById('error' + currentStation);
+        const unlockArea = document.getElementById('unlock-area-' + currentStation);
+        const nextCard = document.getElementById('station' + nextStation);
+
+        if (inputField.value === MASTER_PASSWORD) {
+            // Passwort richtig: Nächste Karte anzeigen und Unlock-Area der alten ausblenden
+            nextCard.classList.remove('hidden');
+            unlockArea.style.display = 'none';
+            
+            // Automatisch zur neuen Karte scrollen
+            setTimeout(() => {
+                nextCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        } else {
+            // Passwort falsch: Fehlermeldung zeigen
+            errorMsg.style.display = 'block';
+            inputField.value = ''; // Feld leeren
+        }
+    }
+</script>
+
+</body>
+</html>
